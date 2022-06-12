@@ -1,16 +1,6 @@
-#include <vector>
-#include <algorithm>
-#include <queue>
-#include <iostream>
-#include <map>
-#include <set>
-#include <cstring>
-#include <climits>
+#include <bits/stdc++.h>
 
 using namespace std;
-
-typedef long long ll;
-typedef pair<int , int> pi_i;
 
 int n, m;
 int marbleNum[302];
