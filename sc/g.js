@@ -30,13 +30,49 @@ let preset = fs.readFileSync(path.join(__dirname, "preset"), "utf8");
 
 if (!fs.existsSync(filePath)) fs.writeFileSync(filePath, preset);
 
+console.log("$ git add cpp_file");
 exec("git add " + filePath, (err, stdout, stderr) => {
-  exec(folderPath + "/.cph", (err, stdout, stderr) => {
-    console.log("GIT ADD");
+  if (stdout) {
+    console.log("STD out : ");
+    console.log(stdout);
+  }
+  if (stderr) {
+    console.log("STD err : ");
+    console.log(stderr);
+  }
+
+  console.log("$ git add cph");
+  exec("git add " + folderPath + "/.cph/*.prob", (err, stdout, stderr) => {
+    if (stdout) {
+      console.log("STD out : ");
+      console.log(stdout);
+    }
+    if (stderr) {
+      console.log("STD err : ");
+      console.log(stderr);
+    }
+
+    console.log("$ git commit -m '[Message]'");
     exec('git commit -m "Add' + fileName + '"', (err, stdout, stderr) => {
-      console.log("GIT COMMIT");
+      if (stdout) {
+        console.log("STD out : ");
+        console.log(stdout);
+      }
+      if (stderr) {
+        console.log("STD err : ");
+        console.log(stderr);
+      }
+
+      console.log("$ git push");
       exec("git push", (err, stdout, stderr) => {
-        console.log("GIT PUSH");
+        if (stdout) {
+          console.log("STD out : ");
+          console.log(stdout);
+        }
+        if (stderr) {
+          console.log("STD err : ");
+          console.log(stderr);
+        }
       });
     });
   });
