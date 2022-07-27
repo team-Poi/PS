@@ -1,6 +1,12 @@
+# temp Files
 null
 temp
 dk.bat
 
-*/*.exe
+# In solving problems
 *(InSolve)
+
+# Build outs
+*/*.exe
+*/*.bin
+*.out
