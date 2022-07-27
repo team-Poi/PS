@@ -31,11 +31,13 @@ let preset = fs.readFileSync(path.join(__dirname, "preset"), "utf8");
 if (!fs.existsSync(filePath)) fs.writeFileSync(filePath, preset);
 
 exec("git add " + filePath, (err, stdout, stderr) => {
-  console.log("GIT ADD");
-  exec('git commit -m "Add' + fileName + '"', (err, stdout, stderr) => {
-    console.log("GIT COMMIT");
-    exec("git push", (err, stdout, stderr) => {
-      console.log("GIT PUSH");
+  exec(folderPath + "/.cph", (err, stdout, stderr) => {
+    console.log("GIT ADD");
+    exec('git commit -m "Add' + fileName + '"', (err, stdout, stderr) => {
+      console.log("GIT COMMIT");
+      exec("git push", (err, stdout, stderr) => {
+        console.log("GIT PUSH");
+      });
     });
   });
 });
