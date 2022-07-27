@@ -1,0 +1,1 @@
+{"name":"Local: 1053","url":"/Volumes/HFS/github/JungolPS/10__/1053.cpp","tests":[{"id":1658905021555,"input":"0\n9\n999999999\n1000000000\n-1","output":"0\n34\n626\n6875"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Volumes/HFS/github/JungolPS/10__/1053.cpp","group":"local","local":true}
