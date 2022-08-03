@@ -1,0 +1,1 @@
+{"name":"Local: 3337","url":"/Users/oein/Documents/Pjs/JungolPS/33__/3337.cpp","tests":[{"id":1659508363639,"input":"10 3\n123 4\n21 5\n34 14\n56 1\n45 7\n723 5\n55 7\n13 5\n910 10\n73 3","output":"13900"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/oein/Documents/Pjs/JungolPS/33__/3337.cpp","group":"local","local":true}
