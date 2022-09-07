@@ -5,8 +5,14 @@ dk.bat
 
 # In solving problems
 *(InSolve)
+InSolve_*
 
 # Build outs
 */*.exe
 */*.bin
 *.out
+
+.vscode/*
+.DS_Store
+**/.DS_Store
+sc/*
