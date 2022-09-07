@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-int K = 0, N = 0;
+int K = 0, n = 0;
 int Ne[502][502];
 int memo[502][502];
 
@@ -39,27 +39,27 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    cin >> N;
+    cin >> n;
 
-    for (int i = 0; i < N + 1; i++)
+    for (int i = 0; i < n + 1; i++)
     {
-        for (int j = 0; j < N + 1; j++)
+        for (int j = 0; j < n + 1; j++)
         {
             Ne[i][j] = 0;
             memo[i][j] = -1;
         }
     }
-    for (int i = 1; i <= N; i++)
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <= N; j++)
+        for (int j = 1; j <= n; j++)
         {
             cin >> Ne[i][j];
         }
     }
     int a = 0;
-    for (int i = 1; i <= N; i++)
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <= N; j++)
+        for (int j = 1; j <= n; j++)
         {
             a = max(solve(i, j), a);
         }
