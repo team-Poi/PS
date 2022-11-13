@@ -12,6 +12,8 @@
 
 using namespace std;
 
+#define interface struct
+
 typedef long long ll;
 typedef unsigned long ull;
 typedef pair<int, int> pii;
