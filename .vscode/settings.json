@@ -87,6 +87,7 @@
     "stack": "cpp",
     "__config": "cpp",
     "__availability": "cpp",
-    "cassert": "cpp"
+    "cassert": "cpp",
+    "preset": "cpp"
   }
 }
