@@ -14,6 +14,7 @@ using namespace std;
 
 #define interface struct
 #define zx3f 1061109567
+#define itn int
 
 typedef long long ll;
 typedef unsigned long ull;
