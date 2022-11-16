@@ -1,0 +1,1 @@
+{"name":"Local: 1749","url":"/Users/dev/Documents/Pjs/JungolPS/17__/1749.cpp","tests":[{"id":1668591653147,"input":"1 3 4\n4 1\n5 5\n10 2\n15 16\n30 14","output":"A\nB\nA\nA\nB"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/dev/Documents/Pjs/JungolPS/17__/1749.cpp","group":"local","local":true}
