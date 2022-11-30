@@ -54,7 +54,7 @@ public:
         vec.clear();
     }
 
-    T at(size_t idx)
+    T &at(size_t idx)
     {
         if (idx < 0)
         {
@@ -87,7 +87,7 @@ public:
         return vec.front();
     }
 
-    T operator[](size_t idx)
+    T &operator[](size_t idx)
     {
         return this->at(idx);
     }
@@ -95,6 +95,11 @@ public:
     size_t size()
     {
         return vec.size();
+    }
+
+    size_t lastIndex()
+    {
+        return this->size() - 1;
     }
 
     bool empty()
