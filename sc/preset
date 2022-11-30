@@ -9,30 +9,42 @@
 #include <cassert>
 #include <stack>
 #include <cstring>
-
-using namespace std;
-
 #define interface struct
 #define zx3f 1061109567
 #define itn int
-
 typedef long long ll;
 typedef unsigned long ull;
 typedef pair<int, int> pii;
-
 typedef signed char i8;
 typedef short i16;
 typedef int i32;
 typedef long long i64;
-
+using namespace std;
 int dx[] = {0, 0, 1, -1};
 int dy[] = {1, -1, 0, 0};
+template <typename T>
+class CVector;
+
+int main()
+{
+    cin.tie(0);
+    cout.tie(0);
+}
 
 template <typename T>
 class CVector
 {
 public:
     vector<T> vec;
+
+    CVector()
+    {
+    }
+
+    CVector(size_t size)
+    {
+        vec.reserve(size);
+    }
 
     void push(T v)
     {
@@ -122,9 +134,3 @@ public:
         return vec.capacity();
     }
 };
-
-int main()
-{
-    cin.tie(0);
-    cout.tie(0);
-}
