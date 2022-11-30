@@ -1,0 +1,1 @@
+{"name":"Local: 2573","url":"/Users/dev/Documents/Pjs/JungolPS/25__/2573.cpp","tests":[{"id":1669799361802,"input":"7\n1 2 4\n3 1 5\n4 7 8\n6 9 10\n2 6 10\n5 5 7\n7 3 4","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/dev/Documents/Pjs/JungolPS/25__/2573.cpp","group":"local","local":true}
