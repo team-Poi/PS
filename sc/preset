@@ -13,6 +13,10 @@ using namespace std;
 #define interface struct
 #define zx3f 1061109567
 #define itn int
+#define _DEBUG_ 0
+#define dout     \
+    if (_DEBUG_) \
+    cout
 typedef long long ll;
 typedef unsigned long ull;
 typedef pair<int, int> pii;
