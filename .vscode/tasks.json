@@ -17,7 +17,7 @@
       },
       "problemMatcher": ["$gcc"],
       "group": "build",
-      "detail": "컴파일러: /usr/bin/clang"
+      "detail": "컴파일러: /usr/bin/g++"
     },
     {
       "label": "execute",
@@ -28,7 +28,7 @@
     {
       "type": "cppbuild",
       "label": "C/C++: g++.exe 활성 파일 빌드",
-      "command": "/usr/bin/clang",
+      "command": "/usr/bin/g++",
       "args": [
         "-fdiagnostics-color=always",
         "-g",
