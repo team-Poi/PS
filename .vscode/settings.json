@@ -100,5 +100,6 @@
     "__tuple": "cpp",
     "bit": "cpp",
     "compare": "cpp"
-  }
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }
