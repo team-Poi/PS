@@ -144,6 +144,11 @@ public:
     {
         return vec.capacity();
     }
+
+    void reverse(int start, int end)
+    {
+        reverse(vec.begin() + start, vec.begin() + end);
+    }
 };
 struct BigInt
 {
