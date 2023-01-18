@@ -1,3 +1,4 @@
+// Preset 끝은 620번째 줄로
 #include <vector>
 #include <algorithm>
 #include <queue>
@@ -607,6 +608,17 @@ struct BigInt
         return res;
     }
 };
+
+// *********************************************************************
+//
+//  PPPP   RRRR   EEEE   SSSS  EEEE  TTTTT          EEEE  NN   N  DDDD
+//  P   P  R   R  E     S      E       T            E     N N  N  D   D
+//  PPPP   RRRR   EEEE   SSSS  EEEE    T            EEEE  N  N N  D   D
+//  P      R   R  E         S  E       T            E     N   NN  D   D
+//  P      R   R  EEEE  SSSS   EEEE    T            EEEE  N    N  DDDD
+//
+// *********************************************************************
+
 int main()
 {
     cin.tie(0);
