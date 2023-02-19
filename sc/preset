@@ -1,4 +1,4 @@
-// Preset 끝은 635번째 줄로
+// Preset 끝은 640번째 줄로
 #include <vector>
 #include <algorithm>
 #include <queue>
@@ -36,6 +36,10 @@ const int dx[] = {0, 0, 1, -1};
 const int dy[] = {1, -1, 0, 0};
 const int bigint_base = 1000000000;
 const int bigint_base_digits = 9;
+
+string to_string(bool v) {
+    return v ? "True" : "False";
+}
 
 template <typename T>
 class CVector
