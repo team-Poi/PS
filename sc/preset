@@ -1,4 +1,4 @@
-// Preset 끝은 620번째 줄로
+// Preset 끝은 635번째 줄로
 #include <vector>
 #include <algorithm>
 #include <queue>
@@ -15,6 +15,7 @@
 #include <sstream>
 #include <iomanip>
 #include <climits>
+#include <any>
 using namespace std;
 #define interface struct
 #define zx3f 1061109567
@@ -151,7 +152,20 @@ public:
     {
         reverse(vec.begin() + start, vec.begin() + end);
     }
+    
+    void forEach(void (*func)(T)) {
+        for(int i = 0;i < size();i++) {
+            func(vec[i]);
+        }
+    }
+    
+    void forEachi(void (*func)(T, int)) {
+        for(int i = 0;i < size();i++) {
+            func(vec[i], i);
+        }
+    }
 };
+    
 struct BigInt
 {
     vector<int> a;
@@ -619,10 +633,11 @@ struct BigInt
 //  P      R   R  EEEE  SSSS   EEEE    T            EEEE  N    N  DDDD
 //
 // *********************************************************************
-
+    
 int main()
 {
     cin.tie(0);
     cout.tie(0);
     ios_base::sync_with_stdio(0);
+    
 }
