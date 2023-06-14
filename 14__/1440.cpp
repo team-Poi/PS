@@ -1,62 +1,52 @@
 #include <vector>
-#include <algorithm>
-#include <queue>
 #include <iostream>
-#include <map>
-#include <set>
-#include <math.h>
-#include <numeric>
-#include <numbers>
-#include <cassert>
-
+#include <queue>
+struct QData {
+    int loc;
+};
 using namespace std;
-
-typedef long long ll;
-typedef pair<int , pair<int , bool>> pii;
-typedef vector<int> vi;
-
-#define s second;
-#define l first
-
-int dx[] = {0 , 0 , 1 , -1};
-int dy[] = {1 , -1 , 0 , 0};
-
-vi path[10005];
 int n;
-int uping[10005];
-
-int main(){
-    cin.tie(0); cout.tie(0);
+vector<int> path[10005];
+bool visited[10005];
+int main() {
     cin >> n;
     for(int i = 0;i < n - 1;i++) {
-        int par , chi;
+        int par, chi;
         cin >> par >> chi;
         path[chi].push_back(par);
-        uping[i] = -1;
+        visited[i] = false;
     }
-    uping[n - 1] = -1;
-    uping[n] = -1;
-
-    int st , ed;
-    cin >> st >> ed;
-    queue<pii> q;
-
-    q.push({st , {0 , 0}});
-    q.push({ed , {0 , 1}});
-
+    
+    int node1;
+    int node2;
+    visited[n - 1] = false;
+    visited[n] = false;
+    cin >> node1 >> node2;
+    
+    queue<QData> q;
+    
+    q.push({
+        node1
+    });
+    q.push({
+        node2
+    });
+    
     while(!q.empty()) {
-        pii now = q.front();
+        QData qf = q.front();
         q.pop();
-
-        if(uping[now.first] != -1) {
-            cout << now.l;
-            return 0;
+        
+        if(visited[qf.loc]) {
+            cout << qf.loc << "\n";
+            break;
         }
-
-        uping[now.l] = now.second.second;
-        // printf("uping[%d] = %d\n", now.l , now.second.second);
-        for(auto x : path[now.l]) {
-            q.push({x , { now.second.first + 1, now.second.second }});
+        
+        visited[qf.loc] = 1;
+        
+        for(auto x : path[qf.loc]) {
+            q.push({
+                x
+            });
         }
     }
 }
