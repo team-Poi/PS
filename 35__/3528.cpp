@@ -1,97 +1,63 @@
 #include <vector>
-#include <algorithm>
-#include <queue>
 #include <iostream>
-#include <map>
+#include <queue>
 #include <set>
-#include <math.h>
-#include <numeric>
-#include <numbers>
-#include <cassert>
-
+#include <algorithm>
 using namespace std;
+using ll = long long;
 
-typedef long long ll;
-typedef pair<int, int> pii;
+string str, ables;
+int ans = 0;
+bool used[15];
 
-int dx[] = {0, 0, 1, -1};
-int dy[] = {1, -1, 0, 0};
-
-string chars;
-bool used[15] = {
-    0,
-};
-
-string madedStr = "           ";
-int ables = 0;
-void dfs(int step)
-{
-    if (step == chars.size())
-    {
-        ables++;
+void dfs(int step) {
+    if(step == ables.size()) {
+        ans++;
         return;
     }
-
-    for (int i = 0; i < chars.size(); i++)
-    {
-        // 사용되었으면 continue
-        if (used[i] == 1)
-            continue;
-        // 전것과 겹치면 continue
-        if (step >= 1 && madedStr[step - 1] == chars[i])
-            continue;
-
+    
+    for(int i = 0;i < ables.size();i++) {
+        if(used[i]) continue;
+        if(step > 0 && str[step - 1] == ables[i]) continue;
+        
         used[i] = 1;
-        madedStr[step] = chars[i];
+        str[step] = ables[i];
         dfs(step + 1);
         used[i] = 0;
     }
 }
 
-int factory(int n)
-{
-    int fac = 1;
-    for (int i = 1; i <= n; i++)
-    {
-        fac *= i;
-    }
-
-    return fac;
+int fibo(int n) {
+    int x = 1;
+    for(int i = 2; i <= n; i++) x *= i;
+    return x;
 }
 
-int main()
-{
-    cin.tie(0);
-    cout.tie(0);
-
-    cin >> chars;
-
-    bool ed = true;
-    int charCnts[30] = {
-        0,
-    };
-    for (int i = 0; i < chars.size(); i++)
-    {
-        if (charCnts[chars[i] - 'a'] >= 1)
-        {
-            ed = false;
+int main() {
+    cin >> ables;
+    str = ables;
+    
+    bool allables = 1;
+    int g[30] = {0,};
+    
+    for(int i = 0;i < ables.size();i++) {
+        if(g[ables[i] - 'a']) {
+            allables = 0;
         }
-        charCnts[chars[i] - 'a']++;
+        
+        g[ables[i] - 'a']+=1;
     }
-
-    if (ed)
-    {
-        cout << factory(chars.size());
+    
+    if(allables) {
+        cout << fibo(ables.size());
         return 0;
     }
-
-    int divs = 1;
-    for (int i = 'a'; i <= 'z'; i++)
-    {
-        int ri = i - 'a';
-        divs *= factory(charCnts[ri]);
-    }
-
+    
     dfs(0);
-    cout << ables / divs;
+    
+    int divider = 1;
+    
+    for(int i = 'a';i <= 'z';i++) divider *= fibo(g[i - 'a']);
+    
+    cout << ans / divider;
 }
