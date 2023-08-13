@@ -1,6 +1,5 @@
 #include <vector>
 #include <algorithm>
-
 template <typename T>
 class Array {
 public:
@@ -83,8 +82,16 @@ public:
     void sort() {
         std::sort(this->v.begin(), this->v.end());
     }
-    
-    unsigned long capacity() {
-        return this->v.capacity();
+
+    void reserve(unsigned long sz) {
+        this->v.reserve(sz);
+    }
+
+    void reserve(unsigned long sz, T data) {
+        this->v.reserve(sz, data);
+    }
+
+    void resize(unsigned long sz) {
+        this->v.resize(sz);
     }
 };
